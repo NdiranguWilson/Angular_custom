@@ -2,10 +2,10 @@
  * Cytonn Technologies
  * @author Ndirangu Wilson <wndirangu@cytonn.com>
  */
-var myapp = angular.module('countryRegions', ["ui.router"]);
+var myapp = angular.module('countryRegions', ["ui.router", "countryUpper","Directive"]);
 myapp.config(function($stateProvider, $urlRouterProvider) {
 
-  // For any unmatched url, send to /route1
+  // For any unmatched url, send to world
   $urlRouterProvider.otherwise("world");
 
   $stateProvider
@@ -25,7 +25,7 @@ myapp.config(function($stateProvider, $urlRouterProvider) {
             url: 'https://restcountries.eu/rest/v1/all'
           })
           .success(function(data, status) {
-            //$scope.items = [];
+
             countries = [];
 
             population = [];
@@ -40,11 +40,6 @@ myapp.config(function($stateProvider, $urlRouterProvider) {
             $scope.populations = population;
 
             console.log($scope.populations);
-
-
-
-
-
 
           })
           .error(function(data, status) {
@@ -66,7 +61,7 @@ myapp.config(function($stateProvider, $urlRouterProvider) {
             url: 'https://restcountries.eu/rest/v1/region/africa'
           })
           .success(function(data, status) {
-            //$scope.items = [];
+
             countries = [];
 
             population = [];
@@ -103,7 +98,7 @@ myapp.config(function($stateProvider, $urlRouterProvider) {
             url: 'https://restcountries.eu/rest/v1/region/asia'
           })
           .success(function(data, status) {
-            //$scope.items = [];
+
             countries = [];
 
             population = [];
@@ -118,11 +113,6 @@ myapp.config(function($stateProvider, $urlRouterProvider) {
             $scope.populations = population;
 
             console.log($scope.populations);
-
-
-
-
-
 
           })
           .error(function(data, status) {
