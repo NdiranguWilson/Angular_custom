@@ -1,0 +1,43 @@
+<!---
+ *
+ * Cytonn Technologies
+ * Ndirangu Wilson <wndirangu@cytonn.com>
+ *
+--->
+<!DOCTYPE html>
+<html ng-app="countryRegions">
+
+<head>
+  <meta charset="utf-8">
+  <title>Countries and their Regions</title>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+</head>
+
+<body class="container">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Countries</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a ui-sref="world" >World</a></li>
+      <li><a ui-sref="africa" >Africa</a></li>
+      <li><a ui-sref="asia">Asia</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+    <div class="row">
+      <div class="span12">
+        <div class="well" ui-view></div>
+      </div>
+    </div>
+
+  <script src="./lib/angular.min.js" ></script>
+  <script src="./lib/angular-ui-router.min.js" ></script>
+  <script src="./js/functions.js" ></script>
+</body>
+
+</html>
