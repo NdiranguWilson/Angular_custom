@@ -8,36 +8,55 @@
 <html ng-app="countryRegions">
 
 <head>
+
   <meta charset="utf-8">
   <title>Countries and their Regions</title>
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/main.css">
 
 </head>
 
-<body class="container">
+<body class="container-fluid">
+
+  <!---Bootstrap Navbar--->
   <nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Countries</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li><a ui-sref="world" >World</a></li>
-      <li><a ui-sref="africa" >Africa</a></li>
-      <li><a ui-sref="asia">Asia</a></li>
-    </ul>
-  </div>
-</nav>
-
-
-    <div class="row">
-      <div class="span12">
-        <div class="well" ui-view></div>
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Countries</a>
       </div>
+      <ul class="nav navbar-nav">
+        <li><a ui-sref="world">World</a></li>
+        <li><a ui-sref="africa">Africa</a></li>
+        <li><a ui-sref="asia">Asia</a></li>
+      </ul>
     </div>
+  </nav>
+  <!---Bootstrap Navbar End--->
 
-  <script src="./lib/angular.min.js" ></script>
-  <script src="./lib/angular-ui-router.min.js" ></script>
-  <script src="./js/functions.js" ></script>
+  <div class="row">
+    <p>
+      Using the restcountries API to obtain Countries of different regions.
+    </p>
+
+  </div>
+
+  <div class="row">
+    <div class="span12">
+
+      <!--- Section where the view is populated--->
+      <div class="well" ui-view></div>
+
+    </div>
+  </div>
+
+  <!---Loading the scripts--->
+  <script src="./lib/angular.min.js"></script>
+  <script src="./lib/angular-ui-router.min.js"></script>
+  <script src="./js/directive.js"></script>
+  <script src="./js/filter.js"></script>
+  <script src="./js/functions.js"></script>
+
+
 </body>
 
 </html>
